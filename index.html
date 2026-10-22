@@ -10,7 +10,7 @@
     
     <style>
         body {
-            background-image: url('https://i.pinimg.com/736x/72/bd/0e/72bd0eae3e6fbb0bd887c998d549f6c5.jpg');
+            background-image: url('https://static.wikia.nocookie.net/yandere-simulator-fanon/images/0/0a/CookingClub2GhoulGirls90.png/revision/latest?cb=20210320090942');
             background-size: cover;    
             
         }
@@ -22,39 +22,30 @@
         }
 
         .header {
-            background: linear-gradient(#78866b, #8f9779);
+            background: linear-gradient(#ff8fab, #ff8fab);
             color: white;
             border-radius: 20px;
             padding: 35px;
         }
 
-        .section-card {
-            border: none;
-            border-radius: 20px;
-            transition: transform 0.2s ease;
-        }
-
-        .section-card:hover {
-            transform: translateY(-3px);
-        }
 
         .section-title {
-            color: #78866b;
+            color: #ff8fab;
             font-weight: bold;
         }
 
         .form-control {
             border-radius: 12px;
             padding: 12px;
-            border: 1px solid #8f9779;
+            border: 1px solid #ffb3c6;
         }
 
         .form-control:focus {
-            border-color: #78866b;
+            border-color: #ff8fab;
         }
 
-        .solve-btn {
-            background-color: #78866b;
+        .btn {
+            background-color: #ff8fab;
             border: none;
             border-radius: 12px;
             padding: 12px 30px;
@@ -62,24 +53,21 @@
             color: white;
         }
 
-        .solve-btn:hover {
-            background-color: #fff8de;
+        .btn:hover {
+            background-color: #ffe5ec;
         }
 
         .footer {
             color: white
         }
 
-        #div2 {
-            background-color: #dbead2;
-            border: 2px solid #8f9779;
+        #output {
+            background-color: #ffe5ec;
+            border: 2px solid #ffb3c6;
             border-radius: 15px;
-            padding: 20px;
-            text-align: left;
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #99a98f;
+            padding: 20px; 
         }
+    
     </style>
 </head>
 <body>
@@ -88,7 +76,7 @@
 
         <div class="header text-start mb-4">
           <h1 class="display-5 fw-bold"> Rainbow Catering Club </h1>
-          <p class="lead mb-0">Add New Member</p>
+          <p class="lead mb-0">Add New Member!</p>
           </div>
 
         <div class="card section-card">
@@ -108,7 +96,7 @@
              type="text"
              id="fname"
              class="form-control"
-             placeholder="...">
+             placeholder="ex.Ayano">
 
         </div>
 
@@ -121,35 +109,31 @@
             type="text"
             id="lname"
             class="form-control"
-            placeholder="...">
+            placeholder="ex.Aishi">
 
         </div>
 
-        <div class="text-start">
-            <button
-            type="button"
-            py-click="check_candidate_status"
-            class="btn solve-btn">
-                Enter
-            </button>
-
-        </div>
-            <br>
-
-        </form>
-
-        <div class="mt-4">
-            <div id="div2">
-                Results will appear here...
-
+          <br>
+        <div class="row">
+          <div class="col">
+              <button class="btn w-100" type="button" py-click="addmember">Add member</button>
             </div>
         </div>
+        <br>
+        <div class="row">
+            <div id="output">
+                <div id="div1"></div>
+                <div id ="div2"></div>
+            </div>
         </div>
-        </div>
+    </form>
+    <br>
+</div>
+<br><br>
     
         <div class="text-center mt-4 text-muted">
             <small>
-                Q2 Seatwork 1 • Made with HTML, Bootstrap & PyScript • Jilliane Tech
+                Q2 Drill 2 • Made with HTML, Bootstrap & PyScript • Jilliane Tech
             </small>
 
         </div>
@@ -166,5 +150,3 @@
 </body>
 </html>
 
-
-</html>    
