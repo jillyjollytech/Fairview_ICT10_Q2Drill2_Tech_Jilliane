@@ -1,28 +1,32 @@
 from pyscript import document, display
 
-def check_candidate_status(e):
+def addmember(e):
 
- club_members = (
- 'Ayano Aishi',
- 'Amai Odayaka',
- 'Shoku Tsuburaya',
- 'Kenko Sukoyaka',
- 'Seiyo Akanishi',
- 'Ajia Ashitomi',
- 'Saki Miyu',
- 'TJ Sales'               
-) 
+    G7 = {'Ayano Aishi', 'Amai Odayaka', 'Shoku Tsuburaya'}
+    G8 = {'Kenko Sukoyaka', 'Seiyo Akanishi', 'Ajia Ashitomi'}
+    G9 = {'Saki Miyu', 'Akifumi Anno', 'Banri Masayuki'}
+    G10 = {'Jilliane Tech', 'Chikao Tsurumak', 'TJ Sales', 'Aika Iseri'}
 
- document.getElementById("div2").innerHTML = "" 
- first_name = document.getElementById("fname").value.strip()
- last_name = document.getElementById("lname").value.strip()
- candidate_name = f"{first_name} {last_name}"
- is_member = candidate_name in club_members
+    allgrades = G7 | G8 | G9 | G10
 
- messages = {
-     True: f"Congratulations {candidate_name}! You are now part of the Rainbow Catering Club!!",
-     False: f"Sorry {candidate_name}, your name is not on the list..."
- }
+    a = document.getElementById("fname").value
+    b = document.getElementById("lname").value 
 
- result = messages[is_member]
- display(result, target = "div2") 
+    c = str.upper(a)
+    d = str.upper(b)
+
+    document.getElementById("output").innerHTML = "" 
+   
+    addedmember = (c + " " + d)
+    allgrades.add(addedmember)
+    members = "<br>".join(sorted(allgrades))
+    numberofmembers = len(allgrades)
+
+    e = f"ALL MEMBERS:<br><br>{members}<br><br>"
+    document.getElementById("output").innerHTML = e
+
+
+    f = f"TOTAL NUMBER OF MEMBERS: {numberofmembers}"
+    display(f, target = "output")
+
+    #
